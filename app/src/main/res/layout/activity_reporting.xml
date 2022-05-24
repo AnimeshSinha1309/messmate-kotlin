@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/input_complaint_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_complaint_summary_placeholder"
+        android:autofillHints="complaintTitle"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/input_complaint_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_complaint_detail_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_complaint_summary" />
+
+    <RadioGroup
+        android:id="@+id/input_complaint_meal_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_complaint_detail">
+
+        <RadioButton
+            android:id="@+id/input_complaint_meal_type_breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/meal_breakfast" />
+
+        <RadioButton
+            android:id="@+id/input_complaint_meal_type_lunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/meal_lunch" />
+
+        <RadioButton
+            android:id="@+id/input_complaint_meal_type_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/meal_dinner" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/input_complaint_emergency_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/input_complaint_emergency_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/input_complaint_meal_type"
+        app:layout_constraintTop_toBottomOf="@id/input_complaint_meal_type" />
+
+    <Button
+        android:id="@+id/input_complaint_submission_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/input_complaint_submission_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_complaint_emergency_switch" />
+
+    <TextView
+        android:id="@+id/input_complaint_acknowledgement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_complaint_acknowledgement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_complaint_submission_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
