@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val myDataset = TestDataModel().loadMealPlans()
+        val myDataset = TestDataModel().loadMealPlans(applicationContext)
 
         val recyclerView = findViewById<RecyclerView>(R.id.meals_list_recycler_view)
         recyclerView.adapter = MealsListAdapter(this, myDataset)

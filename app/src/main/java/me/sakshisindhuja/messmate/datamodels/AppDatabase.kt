@@ -5,9 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-import me.sakshisindhuja.messmate.datamodels.MealsPlan
-import me.sakshisindhuja.messmate.datamodels.MealsPlanDAO
-
 /**
  * Defines a database and specifies data tables that will be used.
  * Version is incremented as new tables/columns are added/removed/changed.
@@ -27,7 +24,7 @@ abstract class AppDatabase: RoomDatabase() {
                     context,
                     AppDatabase::class.java,
                     "app_database")
-                    .createFromAsset("database/bus_schedule.db")
+                    .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance
 

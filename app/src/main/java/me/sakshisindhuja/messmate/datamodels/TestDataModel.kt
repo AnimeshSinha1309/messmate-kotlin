@@ -1,10 +1,20 @@
 package me.sakshisindhuja.messmate.datamodels
 
-import me.sakshisindhuja.messmate.datamodels.MealsPlan
+import android.content.Context
+import me.sakshisindhuja.messmate.datamodels.AppDatabase
 
 class TestDataModel {
 
-    fun loadMealPlans(): List<MealsPlan> {
+    fun writeMealPlans(context: Context) {
+        AppDatabase.getDatabase(context).scheduleDao().insert(
+            MealsPlan(1, "Masala Dosa", "Breakfast 26/05", 120));
+    }
+    fun loadMealPlans(context: Context): List<MealsPlan> {
+        writeMealPlans(context)
+        return AppDatabase.getDatabase(context).scheduleDao().getAll();
+    }
+
+    fun loadSampleMealPlans(): List<MealsPlan> {
         return listOf<MealsPlan>(
             MealsPlan(1, "Masala Dosa", "Breakfast 26/05", 120),
             MealsPlan(2, "Veg Biryani", "Lunch 26/05", 123),

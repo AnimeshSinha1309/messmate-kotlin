@@ -6,6 +6,7 @@
     <string name="meal_breakfast">Breakfast</string>
     <string name="meal_lunch">Lunch</string>
     <string name="meal_dinner">Dinner</string>
+    <string name="meal_icon_description">Meal Icon</string>
 
     <string name="input_complaint_summary_placeholder">Complaint Summary</string>
     <string name="input_complaint_detail_placeholder">Please describe the problem here.</string>

@@ -1,8 +1,9 @@
 package me.sakshisindhuja.messmate.datamodels
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Query
-import kotlinx.coroutines.flow.Flow
+import androidx.room.Insert
 
 /**
  * Provides access to read/write operations on the schedule table.
@@ -11,11 +12,17 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface MealsPlanDAO {
     @Query("SELECT * FROM MealsPlan ORDER BY meal_date_id ASC")
-    fun getAll(): Flow<List<MealsPlan>>
+    fun getAll(): List<MealsPlan>
 
     @Query("SELECT * FROM MealsPlan WHERE meal_type = :mealType ORDER BY meal_date_id ASC")
-    fun getByMealType(mealType: String): Flow<List<MealsPlan>>
+    fun getByMealType(mealType: String): List<MealsPlan>
 
     @Query("SELECT * FROM MealsPlan WHERE meal_name = :mealName ORDER BY meal_date_id ASC")
-    fun getByMealName(mealName: String): Flow<List<MealsPlan>>
+    fun getByMealName(mealName: String): List<MealsPlan>
+
+    @Insert
+    fun insert(vararg mealPlan: MealsPlan)
+
+    @Delete
+    fun delete(mealPlan: MealsPlan)
 }
