@@ -14,6 +14,9 @@ interface MealsPlanDAO {
     @Query("SELECT * FROM MealsPlan ORDER BY meal_date_id ASC")
     fun getAll(): List<MealsPlan>
 
+    @Query("SELECT * FROM MealsPlan WHERE meal_date_id = :mealDateString")
+    fun getByMealDate(mealDateString: String): List<MealsPlan>
+
     @Query("SELECT * FROM MealsPlan WHERE meal_type = :mealType ORDER BY meal_date_id ASC")
     fun getByMealType(mealType: String): List<MealsPlan>
 

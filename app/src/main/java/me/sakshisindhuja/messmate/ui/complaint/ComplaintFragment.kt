@@ -1,4 +1,4 @@
-package me.sakshisindhuja.messmate.ui.slideshow
+package me.sakshisindhuja.messmate.ui.complaint
 
 import android.os.Build
 import android.os.Bundle
@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import me.sakshisindhuja.messmate.databinding.FragmentSlideshowBinding
+import me.sakshisindhuja.messmate.databinding.FragmentComplaintBinding
 
 import me.sakshisindhuja.messmate.datamodels.ComplaintsDataInterface
 
 
-class SlideshowFragment : Fragment() {
+class ComplaintFragment : Fragment() {
 
-    private var _binding: FragmentSlideshowBinding? = null
+    private var _binding: FragmentComplaintBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,7 +27,7 @@ class SlideshowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentComplaintBinding.inflate(inflater, container, false)
         binding.inputComplaintSubmissionButton.setOnClickListener {
             val selectedButton: RadioButton = requireView().findViewById(binding.inputComplaintMealType.checkedRadioButtonId)
             val complaintSummary: String = binding.inputComplaintSummary.text.toString()

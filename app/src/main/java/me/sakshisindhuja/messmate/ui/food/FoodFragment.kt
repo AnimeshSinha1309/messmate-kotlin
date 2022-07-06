@@ -1,4 +1,4 @@
-package me.sakshisindhuja.messmate.ui.gallery
+package me.sakshisindhuja.messmate.ui.food
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 
-import me.sakshisindhuja.messmate.databinding.FragmentGalleryBinding
 import me.sakshisindhuja.messmate.MealsListAdapter
+import me.sakshisindhuja.messmate.databinding.FragmentFoodBinding
 import me.sakshisindhuja.messmate.datamodels.MealsDataInterface
 
 
-class GalleryFragment : Fragment() {
+class FoodFragment : Fragment() {
 
-    private var _binding: FragmentGalleryBinding? = null
+    private var _binding: FragmentFoodBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +25,7 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentFoodBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val recyclerView: RecyclerView = binding.mealsListRecyclerView
