@@ -52,7 +52,7 @@
             android:text="@string/meal_dinner" />
     </RadioGroup>
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/input_complaint_emergency_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

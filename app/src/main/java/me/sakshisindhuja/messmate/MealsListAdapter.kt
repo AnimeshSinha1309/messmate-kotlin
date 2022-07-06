@@ -1,6 +1,5 @@
 package me.sakshisindhuja.messmate
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,6 @@ import me.sakshisindhuja.messmate.datamodels.MealsPlan
  * Adapter for the [RecyclerView] in [MainActivity]. Displays [Affirmation] data object.
  */
 class MealsListAdapter(
-    private val context: Context,
     private val dataset: List<MealsPlan>
 ) : RecyclerView.Adapter<MealsListAdapter.ItemViewHolder>() {
 
