@@ -12,6 +12,7 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="app_main_greeting">Welcome to MessMate, Sakshi!</string>
+    <string name="item_menu_greeting">Here\'s the list of all your meals</string>
     <string name="complaint_greeting">Sorry for the issue, please report here</string>
 
     <string name="meal_breakfast">Breakfast</string>

@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/app_main_greeting"
+        android:text="@string/item_menu_greeting"
         android:textColor="@color/text_primary"
         android:textSize="24sp"
         android:textStyle="bold"

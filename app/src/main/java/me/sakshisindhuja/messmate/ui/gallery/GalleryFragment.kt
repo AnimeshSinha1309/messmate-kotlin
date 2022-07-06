@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 import me.sakshisindhuja.messmate.databinding.FragmentGalleryBinding
 import me.sakshisindhuja.messmate.MealsListAdapter
-import me.sakshisindhuja.messmate.datamodels.TestDataModel
+import me.sakshisindhuja.messmate.datamodels.MealsDataInterface
 
 
 class GalleryFragment : Fragment() {
@@ -29,7 +29,7 @@ class GalleryFragment : Fragment() {
         val root: View = binding.root
 
         val recyclerView: RecyclerView = binding.mealsListRecyclerView
-        val myDataset = TestDataModel().loadMealPlans(requireContext())
+        val myDataset = MealsDataInterface().loadMealPlans(requireContext())
         recyclerView.adapter = MealsListAdapter(myDataset)
 
         return root

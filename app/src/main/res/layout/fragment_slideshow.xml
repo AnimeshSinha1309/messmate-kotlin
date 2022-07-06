@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/input_complaint_summary_placeholder"
         android:autofillHints="complaintTitle"
-        android:inputType="numberDecimal"
+        android:inputType="textAutoCorrect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

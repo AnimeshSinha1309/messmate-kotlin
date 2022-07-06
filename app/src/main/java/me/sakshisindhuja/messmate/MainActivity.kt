@@ -12,7 +12,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import me.sakshisindhuja.messmate.databinding.ActivityMainBinding
 
 
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab.setOnClickListener { view ->
+        binding.appBarMain.fab.setOnClickListener {
             val intent = Intent().apply {
                 action = Intent.ACTION_SEND
                 data = Uri.parse("mailto:")
@@ -37,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 putExtra(Intent.EXTRA_EMAIL, "mess.admin@jssate.edu")
                 putExtra(Intent.EXTRA_SUBJECT, "Regarding Food in the Mess")
             }
-            startActivity(intent);
+            startActivity(intent)
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
