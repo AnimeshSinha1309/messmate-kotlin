@@ -1,10 +1,11 @@
-package me.sakshisindhuja.messmate
+package me.sakshisindhuja.messmate.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import me.sakshisindhuja.messmate.R
 
 import me.sakshisindhuja.messmate.datamodels.MealsPlan
 
@@ -41,8 +42,9 @@ class MealsListAdapter(
      */
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
+        val mealType: String = item.mealType + " " + item.mealDateId
         holder.textViewMealItem.text = item.mealName
-        holder.textViewMealType.text = item.mealType
+        holder.textViewMealType.text = mealType
     }
 
     /**

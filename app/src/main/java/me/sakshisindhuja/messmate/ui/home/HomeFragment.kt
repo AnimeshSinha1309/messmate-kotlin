@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import me.sakshisindhuja.messmate.ComplaintsListAdapter
-import me.sakshisindhuja.messmate.MealsListAdapter
+import me.sakshisindhuja.messmate.adapters.ComplaintsListAdapter
+import me.sakshisindhuja.messmate.adapters.MealsListAdapter
 import me.sakshisindhuja.messmate.databinding.FragmentHomeBinding
-import me.sakshisindhuja.messmate.datamodels.ComplaintItem
 import me.sakshisindhuja.messmate.datamodels.ComplaintsDataInterface
 import me.sakshisindhuja.messmate.datamodels.MealsDataInterface
 

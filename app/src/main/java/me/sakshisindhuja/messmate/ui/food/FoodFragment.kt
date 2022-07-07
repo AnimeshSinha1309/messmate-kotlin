@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 
-import me.sakshisindhuja.messmate.MealsListAdapter
+import me.sakshisindhuja.messmate.adapters.MealsListAdapter
 import me.sakshisindhuja.messmate.databinding.FragmentFoodBinding
 import me.sakshisindhuja.messmate.datamodels.MealsDataInterface
 

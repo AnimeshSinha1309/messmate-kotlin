@@ -2,7 +2,6 @@ package me.sakshisindhuja.messmate.datamodels
 
 import android.content.Context
 import androidx.room.*
-import androidx.room.migration.AutoMigrationSpec
 
 /**
  * Defines a database and specifies data tables that will be used.
