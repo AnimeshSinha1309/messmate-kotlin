@@ -12,14 +12,22 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_food"
         android:name="me.sakshisindhuja.messmate.ui.food.FoodFragment"
         android:label="@string/menu_food"
         tools:layout="@layout/fragment_food" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_complaint"
         android:name="me.sakshisindhuja.messmate.ui.complaint.ComplaintFragment"
         android:label="@string/menu_complaint"
         tools:layout="@layout/fragment_complaint" />
+
+    <fragment
+        android:id="@+id/nav_splash"
+        android:name="me.sakshisindhuja.messmate.ui.splash.SplashFragment"
+        android:label="@string/menu_splash"
+        tools:layout="@layout/fragment_splash" />
+
+
 </navigation>
