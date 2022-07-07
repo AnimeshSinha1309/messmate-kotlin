@@ -27,4 +27,15 @@
     <string name="input_complaint_emergency_switch">Address Immediately!</string>
     <string name="input_complaint_submission_button">Submit Complaint</string>
     <string name="input_complaint_acknowledgement">Sorry about that, we will respond ASAP.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jssate_logo_desc">JSSATE Logo</string>
+    <string name="department_of_computer_science">Department of Computer Science</string>
+    <string name="mess_management_android_app_by">Mess Management Android App by:</string>
+    <string name="sakshi_sindhuja">Sakshi</string>
+    <string name="_1js19cs143">1JS19CS143</string>
+    <string name="sneha_mondal">Sneha Mondal</string>
+    <string name="_1js19cs170">1JS19CS170</string>
+    <string name="start_app">Start App</string>
+    <string name="my_name">Sakshi Sindhuja</string>
 </resources>
