@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import me.sakshisindhuja.messmate.R
 import me.sakshisindhuja.messmate.databinding.FragmentComplaintBinding
 
 import me.sakshisindhuja.messmate.datamodels.ComplaintsDataInterface
@@ -28,14 +30,14 @@ class ComplaintFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentComplaintBinding.inflate(inflater, container, false)
-        binding.inputComplaintSubmissionButton.setOnClickListener {
+        binding.inputComplaintSubmissionButton.setOnClickListener { view ->
             val selectedButton: RadioButton = requireView().findViewById(binding.inputComplaintMealType.checkedRadioButtonId)
             val complaintSummary: String = binding.inputComplaintSummary.text.toString()
             val mealType: String = selectedButton.text.toString()
             val addressImmediately: Boolean = binding.inputComplaintEmergencySwitch.isPressed
             ComplaintsDataInterface().writeComplaint(
                 requireContext(), complaintSummary, mealType, addressImmediately)
-
+            view.findNavController().navigate(R.id.nav_home)
         }
         return binding.root
     }
