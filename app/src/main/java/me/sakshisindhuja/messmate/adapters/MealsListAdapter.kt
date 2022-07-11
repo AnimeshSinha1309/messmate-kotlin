@@ -3,6 +3,7 @@ package me.sakshisindhuja.messmate.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import me.sakshisindhuja.messmate.R
@@ -24,6 +25,7 @@ class MealsListAdapter(
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textViewMealItem: TextView = view.findViewById(R.id.text_meal_item_name)
         val textViewMealType: TextView = view.findViewById(R.id.text_meal_type_name)
+        val imageViewMealIcon: ImageView = view.findViewById(R.id.meal_image)
     }
 
     /**
@@ -45,6 +47,19 @@ class MealsListAdapter(
         val mealType: String = item.mealType + " " + item.mealDateId
         holder.textViewMealItem.text = item.mealName
         holder.textViewMealType.text = mealType
+        if ("Vada" in item.mealName) {
+            holder.imageViewMealIcon.setImageResource(R.mipmap.food_vada)
+        } else if ("Biryani" in item.mealName) {
+            holder.imageViewMealIcon.setImageResource(R.mipmap.food_biryani)
+        } else if ("Dosa" in item.mealName) {
+            holder.imageViewMealIcon.setImageResource(R.mipmap.food_dosa)
+        } else if ("Omlette" in item.mealName) {
+            holder.imageViewMealIcon.setImageResource(R.mipmap.food_omlette)
+        } else if ("Puri" in item.mealName) {
+            holder.imageViewMealIcon.setImageResource(R.mipmap.food_puri)
+        } else if ("Poha" in item.mealName) {
+            holder.imageViewMealIcon.setImageResource(R.mipmap.food_poha)
+        }
     }
 
     /**

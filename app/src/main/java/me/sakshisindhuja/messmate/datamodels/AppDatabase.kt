@@ -23,7 +23,7 @@ abstract class AppDatabase: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context,
                     AppDatabase::class.java,
-                    "messmate_database_1")
+                    "messmate_database_3")
                     .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance

@@ -25,7 +25,7 @@ class MealsDataInterface {
                 MealsPlan(11, "Aalo, Aachar, Paratha", "Lunch","10/07/22"),
                 MealsPlan(12, "Gobi Sabzi", "Dinner", "10/07/22"),
                 MealsPlan(13, "Poha", "Breakfast", "11/07/22"),
-                MealsPlan(14, "Tadka, Roti, Omlet", "Lunch", "11/07/22"),
+                MealsPlan(14, "Tadka, Roti, Omlette", "Lunch", "11/07/22"),
                 MealsPlan(15, "Kaddu Roti", "Dinner", "11/07/22"),
             )
             for (dummyItem in dummyData) {
@@ -46,6 +46,7 @@ class MealsDataInterface {
         writeMealPlans(context)
         val today: String = LocalDateTime.now().format(
             DateTimeFormatter.ofPattern("dd/MM/yy"))
+
         return AppDatabase.getDatabase(context).mealsPlanDAO().getByMealDate(today)
         // TODO: Use current date string for this
     }
